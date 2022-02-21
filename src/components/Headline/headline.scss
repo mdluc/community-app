@@ -1,0 +1,11 @@
+$undeline-color: #E84E4E;
+$headline-color: #6C757D;
+
+.page-headline{
+    color:$headline-color;
+    font-family: 'Bebas Neue', cursive;
+    padding:10px;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color:$undeline-color;
+}

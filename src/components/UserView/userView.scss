@@ -1,0 +1,72 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #F8F9FA;
+  margin:5px 0px;
+  border-radius: 10px;
+  border:1px solid #959ca1;
+  -webkit-box-shadow: 3px -4px 15px -3px rgba(149,156,161,0.77); 
+  box-shadow: 3px -4px 15px -3px rgba(149,156,161,0.77);
+  font-family: 'Roboto Slab', serif;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+  
+  .circular-square {
+    position: relative;
+    margin:10px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #959ca1;
+    width: 60%;
+    height: auto;
+  }
+
+  .badges{
+    display:flex;
+    justify-content: center;
+    margin:10px 0px;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .catchPhrase{
+    font-style: italic;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    span{
+      margin:5px;
+      font-size: 13px;
+    }
+  }
+
+  .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  .social{
+    a{
+      padding:5px;
+      text-decoration: none;
+      color:black;
+    }
+  }
+  .option{
+    text-decoration: none;
+    color:#F8F9FA
+  }
+
+  .btn{
+    margin: 10px 0 25px 0;
+  }
+}
+

@@ -1,0 +1,50 @@
+$navbar-color: #217E80;
+$button-color:#000000;
+$button-color-hover:#217E80;
+//$button-color: #000000;
+$text-color: #999A9C;
+$undeline-color: #E84E4E;
+$link-color: #FEFEFE;
+
+
+.post-container{
+    background-color: #d3d1d1;
+    border:2px solid black;
+    margin:15px 10px;
+    
+    .content{
+        font-style: italic;
+        padding:10px;
+    }
+
+    .comment-button{
+        background-color:$button-color;
+        border:0px;
+
+        &:hover{
+            background-color: $button-color-hover;
+            border:0px;
+        }
+    }
+
+    .up-button{
+        font-size: 30px;
+        color:$button-color;
+        cursor: pointer;        
+        &:hover{
+            color:$button-color-hover;
+        }
+    }
+
+    .card-header{
+        background-color:#eeecec;
+    }
+
+    a{
+        color:#6C757D;
+
+        &:hover{
+            color:$navbar-color;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+$background-color: #FEFEFE;
+$navbar-color: #217E80;
+$undeline-color: #E84E4E;
+$link-color: #FEFEFE;
+
+.header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    //margin-bottom: 25px;
+    background-color:$navbar-color;
+  
+    .logo {
+      height: 100%;
+      width: 70px;
+      padding: 5px;
+    }
+  
+    .options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .option {
+        padding: 10px 15px;
+        cursor: pointer;
+        text-decoration: none;
+        color:$link-color;
+        font-family: 'Bebas Neue', cursive;
+        font-size:25px;
+
+        &:hover{
+          text-decoration: underline;
+          text-decoration-thickness: 5px;
+          text-decoration-color:$undeline-color;
+        }
+      }
+    }
+  }
+

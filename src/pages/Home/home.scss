@@ -1,0 +1,53 @@
+$breakpoint-tablet: 768px;
+
+
+.homepage {
+  .title {
+    background-color: rgb(226, 224, 224);
+  }
+
+  .box-item {
+    display: flex;
+    justify-content: center;
+    padding:10px;
+   
+    .item {
+      margin: 10px 25px;
+      width: 100%;
+      background-color: #FEFEFE;
+      border:2px solid #217E80;
+      border-radius: 10px;
+      padding:10px;
+
+      .icon{
+        margin:10px;
+      }
+
+      .text{
+        margin:10px 20px;
+
+        }
+    }
+  }
+
+  .subtitle {
+    background-color: #DDA970;
+    height: 20vw;
+    padding: 30px;
+  }
+
+ @media (max-width: $breakpoint-tablet) {
+    .subtitle {
+      height: 50vw;
+    }
+    .box-item{
+        flex-direction: column;
+        align-items: center;
+        margin:15px;
+        
+        .item {
+           margin:10px;
+          }
+    }
+  }
+}
