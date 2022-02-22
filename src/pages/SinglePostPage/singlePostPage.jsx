@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Headline from '../../components/Headline/headline';
-import PostsView from '../../components/PostsView/postsView';
 import PostView from '../../components/PostView/postView';
 
 const SinglePostPage = () => {
-  const {id} = useParams();
   const [singlePost, setSinglePost] = useState([])
+  const {id} = useParams();
 
     const fetchPost = () => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}/`)

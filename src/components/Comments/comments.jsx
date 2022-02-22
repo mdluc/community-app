@@ -1,36 +1,71 @@
 import React, { useEffect, useState } from "react";
-import CommentView from "../CommentView/commentView";
-import "./comments.scss";
+import Comment from "../Comment/comment";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import "./comments.scss";
 
-const Comments = ({ postId, showComments }) => {
-  const [comments, setComments] = useState([]);
-  
+import { connect } from "react-redux";
+import {
+  setComments,
+  setLoadingComments,
+} from "../../redux/comment/comment.actions";
+
+let Comments = ({
+  comments,
+  isLoading,
+  postId,
+  dispatchSetComments,
+  dispatchSetLoading,
+}) => {
+  // const [comments, setComments] = useState([]);
 
   const fetchComments = () => {
+    dispatchSetLoading(true);
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
       .then((response) => response.json())
-      .then((data) => setComments(data));
+      .then((data) => {
+        dispatchSetComments(data);
+        dispatchSetLoading(false);
+      });
   };
 
   useEffect(() => {
-    return showComments ? fetchComments() : setComments([]);
-  }, [postId, showComments]);
+    if (!isLoading) 
+    fetchComments();
+  }, [isLoading]);
 
   return (
     <div className="box">
-      {comments.map((comment) => (
+    
+      {
+      
+      comments.comments.map((comment) => (
+      
         <div key={comment.id}>
-          <CommentView {...comment} />
+
+          <Comment {...comment} />
         </div>
       ))}
-      {showComments ? (
+      {(
         <a href={`#top${postId}`}>
           <BsFillArrowUpCircleFill className="up-button" />
         </a>
-      ) : null}
+      )}
     </div>
   );
 };
+
+const mapStateToProps = (state) => {
+  {console.log(state)}
+  return {
+    comments: state.comments,
+    isLoading: state.isLoading,
+  };
+};
+
+const mapDispatchToProps = {
+  dispatchSetComments: setComments,
+  dispatchSetLoading: setLoadingComments,
+};
+Comments = connect(mapStateToProps, mapDispatchToProps)(Comments);
 
 export default Comments;

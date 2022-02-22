@@ -1,7 +1,7 @@
 import React from "react";
-import "./commentView.scss"
+import "./comment.scss"
 
-export const CommentView = ({ body, email, name }) => {
+export const Comment = ({ body, email, name }) => {
   const username = email.substring(0, email.indexOf("@"));
   const title = name.charAt(0).toUpperCase().concat(name.slice(1,name.length));
   return (
@@ -18,4 +18,4 @@ export const CommentView = ({ body, email, name }) => {
   );
 };
 
-export default CommentView;
+export default Comment;
