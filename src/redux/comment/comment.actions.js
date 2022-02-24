@@ -4,7 +4,7 @@ export const SET_LOADING = "SET_LOADING";
 export const setComments = (list) => {
   return {
     type: SET_COMMENTS,
-    payload: list,
+    payload: list
   };
 };
 

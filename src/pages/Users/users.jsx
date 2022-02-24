@@ -20,7 +20,7 @@ export const Users = () => {
   return (
 <div>
   <Headline headline="OUR STUFF"/>
-  <Row xs={1} md={3} xl={4} className="content">
+  <Row xs={1} md={3} xl={4} className="g-3 content">
       {users.map((user) => (
         <Col 
         key={user.id} style={{height:`100%`}}><UserView key={user.id} {...user}/></Col>

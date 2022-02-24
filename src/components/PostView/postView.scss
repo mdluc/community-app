@@ -1,7 +1,6 @@
 $navbar-color: #217E80;
 $button-color:#000000;
 $button-color-hover:#217E80;
-//$button-color: #000000;
 $text-color: #999A9C;
 $undeline-color: #E84E4E;
 $link-color: #FEFEFE;
@@ -11,7 +10,9 @@ $link-color: #FEFEFE;
     background-color: #d3d1d1;
     border:2px solid black;
     margin:15px 10px;
+    display:flex;
     
+   
     .content{
         font-style: italic;
         padding:10px;
@@ -41,10 +42,10 @@ $link-color: #FEFEFE;
     }
 
     a{
-        color:#6C757D;
+        color:white;
 
         &:hover{
-            color:$navbar-color;
+            color:white;
         }
     }
 }

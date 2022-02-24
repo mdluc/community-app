@@ -6,8 +6,8 @@ const INITIAL_VALUE = {
 
 export const postsReducer = (state = INITIAL_VALUE, action) => {
     switch(action.type){
-        case SET_POSTS:
-            return {...state, list: action.payload}
+      //  case SET_POSTS:
+      //      return {...state, list: action.payload}
         default:
             return state;
     }

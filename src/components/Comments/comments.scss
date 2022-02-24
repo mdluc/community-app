@@ -1,10 +1,9 @@
 .box {
   margin: 15px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  width:80%;
+  display:block;
+  margin: 0 auto;
   .top {
     top: 20px;
   }
