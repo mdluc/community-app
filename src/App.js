@@ -7,11 +7,12 @@ import Posts from "./pages/Posts/posts";
 import Users from "./pages/Users/users";
 import PostsByUser from "./pages/PostsByUser/postsByUser";
 import SinglePostPage from "./pages/SinglePostPage/singlePostPage";
+import { PostProvider } from "./context/PostsContext";
 
 function App() {
   return(
     <div className="App">
-      <Header/>
+      <PostProvider><Header/>
       <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/posts" element={<Posts/>}/>
@@ -19,6 +20,7 @@ function App() {
        <Route exact path="/stuff/:id/posts" element={<PostsByUser/>}/>
        <Route exact path="/posts/:id" element={<SinglePostPage/>}/>
      </Routes>
+     </PostProvider>
     </div>
   )
 }

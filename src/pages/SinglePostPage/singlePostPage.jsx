@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import Headline from "../../components/Headline/headline";
 import PostView from "../../components/PostView/postView";
 import { Row } from "react-bootstrap";
+import { usePosts } from "../../context/PostsContext";
 
 const SinglePostPage = () => {
-  const [singlePost, setSinglePost] = useState([]);
+  const { fetchSinglePost, singlePost } = usePosts();
   const { id } = useParams();
-
-  const fetchPost = () => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}/`)
-      .then((response) => response.json())
-      .then((data) => setSinglePost(data));
-  };
-
+  
   useEffect(() => {
-    fetchPost();
+    fetchSinglePost(id);
   }, []);
 
   return (

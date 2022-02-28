@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Comment from "../Comment/comment";
 import "./comments.scss";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { useComments } from "../../context/CommentsContext";
 
 const Comments = ({ postId, showComments }) => {
-  const [comments, setComments] = useState([]);
-  
-
-  const fetchComments = () => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-      .then((response) => response.json())
-      .then((data) => setComments(data));
-  };
+  const {comments, fetchComments, setComments} = useComments();
 
   useEffect(() => {
-    return showComments ? fetchComments() : setComments([]);
+    return showComments ? fetchComments(postId) : setComments([]);
   }, [postId, showComments]);
 
   return (

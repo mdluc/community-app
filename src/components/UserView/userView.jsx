@@ -9,9 +9,6 @@ import "./userView.scss";
 
 const UserView = ({ id, name, address, company, email, website, phone }) => {
   const tags = company.bs.split(" ");
-
-
-
   return (
     <div className="profile-container">
       <Badge bg="secondary">Profile</Badge>

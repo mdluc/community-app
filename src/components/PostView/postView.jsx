@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./postView.scss";
 
 import { useLocation } from "react-router-dom";
+import { CommentProvider } from "../../context/CommentsContext";
 
 const PostView = ({ userId, id, body, title, newPath }) => {
   const [showComments, setShowComments] = useState(false);
@@ -44,7 +45,7 @@ const PostView = ({ userId, id, body, title, newPath }) => {
               >
                 {showComments ? `Hide` : `Show`} Comments
               </Button>
-              <Comments showComments={showComments} postId={id} />
+              <CommentProvider><Comments showComments={showComments} postId={id} /></CommentProvider>
             </>
           )}
         </Card.Body>
