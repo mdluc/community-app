@@ -1,10 +1,7 @@
-.box {
-  margin: 15px;
-  border-radius: 10px;
-  width:80%;
-  display:block;
-  margin: 0 auto;
+.comments-container{
+  width: 100%;
   .top {
     top: 20px;
+    z-index: 988;
   }
 }

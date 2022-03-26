@@ -1,33 +1,24 @@
-.container{
-    padding:5px 5px;
-    margin:10px 0px;
-    background-color: rgba(180, 180, 182, 0.301);
-    border-radius: 10px;
+.comment-container {
+  background-color: var(--background-dark);
+  margin: 0.5em;
+  padding-block: 1.5em;
+  border-radius: 10px;
 
-    .comment{
-        background-color:#959ca1;
-        border-radius: 10px;
-        padding:5px;
-        display:flex;
-        margin:5px auto;
-        color:white;
-    }
-    
-    .title{
-        margin:5px 10px;
-    }
+  .comment {
+    display: flex;
+    width:80%;
+    margin:auto;
+    padding: 0.5em;
+  }
 
-    .posted-by{
-        font-size: 13px;
-        a{
-            text-decoration: none;
-            
-            &:link{
-                text-decoration: none;
-                color: #6C757D;
-            }
-        }
-    }
-    
+  .title {
+    font-size: 1.2em;
+    font-weight: 600;
 
+  }
+
+  .posted-by {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
 }

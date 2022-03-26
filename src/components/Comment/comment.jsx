@@ -5,8 +5,9 @@ export const Comment = ({ body, email, name }) => {
   const username = email.substring(0, email.indexOf("@"));
   const title = name.charAt(0).toUpperCase().concat(name.slice(1,name.length));
   return (
-    <div className="container">
+    <div className="comment-container">
       <div className="title">{title}</div>  
+      <hr/>
       <div className="comment">
         <h3>&#10077;</h3>  
         <span>{body}</span>

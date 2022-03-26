@@ -16,7 +16,7 @@ const PostsByUser = () => {
 
   return (
     <div>
-      <Headline headline={`POSTS BY USED ID#:${id}`} />
+      <Headline headline={`POSTS BY USER ID#:${id}`} />
       <Link to="/stuff">
         <Button variant="secondary" size="sm">
           Go Back

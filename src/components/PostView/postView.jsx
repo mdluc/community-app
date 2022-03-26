@@ -26,26 +26,28 @@ const PostView = ({ userId, id, body, title, newPath }) => {
           <Card.Title>{title}</Card.Title>
         </Card.Header>
         <Card.Body>
-          <Card.Text className="content">{body}</Card.Text>
+          <Card.Text className="text">{body}</Card.Text>
           {path.length <= 6 ? (
-            <Button className="comment-button" variant="secondary" size="md">
-              <Link to={{ pathname: `/posts/${id}`}}>Read more</Link>
-            </Button>
+            <div className="comment-button">
+              <Link to={{ pathname: `/posts/${id}` }}>Read more</Link>
+            </div>
           ) : path.includes("stuff") ? (
-            <Button className="comment-button" variant="secondary" size="md">
-              <Link to={{ pathname: `/posts/${id}`}}>Read more</Link>
-            </Button>
+            <div className="comment-button">
+              <Link to={{ pathname: `/posts/${id}` }}>Read more</Link>
+            </div>
           ) : (
             <>
               <Button
-                className="comment-button"
+                className="comment-button btn"
                 variant="secondary"
                 size="md"
                 onClick={handleShowComments}
               >
                 {showComments ? `Hide` : `Show`} Comments
               </Button>
-              <CommentProvider><Comments showComments={showComments} postId={id} /></CommentProvider>
+              <CommentProvider>
+                <Comments showComments={showComments} postId={id} />
+              </CommentProvider>
             </>
           )}
         </Card.Body>

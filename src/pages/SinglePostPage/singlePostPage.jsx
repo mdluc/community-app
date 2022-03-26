@@ -22,15 +22,9 @@ const SinglePostPage = () => {
           Go Back
         </Button>
       </Link>
-
-      <Row
-        xs={1}
-        md={1}
-        className="g-5"
-        style={{ margin: "0 auto", width: "80%" }}
-      >
+        <div className="posts-container">
         <PostView {...singlePost} />
-      </Row>
+        </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Headline from "../../components/Headline/headline";
 import UserView from "../../components/UserView/userView";
-import './user.scss'
+import "./user.scss";
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
@@ -18,15 +18,14 @@ export const Users = () => {
   }, []);
 
   return (
-<div>
-  <Headline headline="OUR STUFF"/>
-  <Row xs={1} md={3} xl={4} className="g-3 content">
-      {users.map((user) => (
-        <Col 
-        key={user.id} style={{height:`100%`}}><UserView key={user.id} {...user}/></Col>
-      ))}
-    </Row>
-</div>
+    <div>
+      <Headline headline="OUR STUFF" />
+      <div className="users-container">
+        {users.map((user) => (
+          <UserView key={user.id} {...user} />
+        ))}
+      </div>
+    </div>
   );
 };
 

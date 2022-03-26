@@ -1,0 +1,74 @@
+:root{
+  --background-color: #fff;
+  --background-light: #fff;
+  --background-dark: #d8d6d6;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(33,126,128);
+  --hover-color:rgb(21, 84, 85);
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--background-light);
+  text-align: center;
+  padding-top: 70px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color)
+  }
+  a:hover{
+    color:var(--hover-color);
+  }
+
+ .main {
+   padding-block:3vw;
+ }
+ 
+ .container {
+    padding-inline: 10vw;
+ }
+
+ .section{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3vw;
+ }
+
+ .posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 1.5em;
+}
+
+.btn{
+  background-color: var(--primary-color);
+  margin-block:.8em;
+}
+
+.btn:hover{
+  background-color:var(--hover-color);
+}
+
+.up-button{
+  font-size: 1.5em;
+}
+
+ @media screen and (max-width: 1280px){}
+ @media screen and (max-width: 1050px){}
+ @media screen and (max-width: 768px){}
+ @media screen and (max-width: 480px){}

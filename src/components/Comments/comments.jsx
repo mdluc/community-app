@@ -12,7 +12,7 @@ const Comments = ({ postId, showComments }) => {
   }, [postId, showComments]);
 
   return (
-    <div className="box">
+    <div className="comments-container">
       {comments.map((comment) => (
         <div key={comment.id}>
           <Comment {...comment} />
